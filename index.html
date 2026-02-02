@@ -59,7 +59,6 @@ button {
 
 .heart {
   position: absolute;
-  color: red;
   animation: fall 5s linear infinite;
 }
 
@@ -73,9 +72,7 @@ button {
 <body>
 
 <div class="container" id="box">
-  <!-- GANTI FOTO PACAR KAMU DI SINI -->
   <img src="foto-pacar.jpg" alt="foto kamu ❤️">
-
   <h2>Apa kamu memaafkan aku?</h2>
 
   <button id="yes" onclick="yesClick()">Iya</button>
@@ -86,6 +83,10 @@ button {
 let yesBtn = document.getElementById("yes");
 let noBtn = document.getElementById("no");
 let scale = 1;
+
+// GANTI LINK DI BAWAH
+const formLink = "https://docs.google.com/forms/d/e/1FAIpQLSdJ3LY4dIpY-4QF77Bt8yqDQstR8hSFnmvdHMJbZpe7ckAtGw/viewform?usp=header";
+const waLink = "https://wa.me/6285777697893"; // ganti no WA kamu
 
 function moveNo() {
   let x = Math.random() * (window.innerWidth - 100);
@@ -99,18 +100,16 @@ function moveNo() {
 
 function yesClick() {
   document.getElementById("box").innerHTML = `
-    <h2>mungkin ini terlalu cepat 💕</h2>
-    <h3>selamat valentine bubuttt ❤️</h3>
-    <p>sebentar ya...</p>
+    <h2>makasih yaa ❤️</h2>
+    <h3>aku tunggu jawaban kamu 💕</h3>
   `;
 
   setTimeout(() => {
-    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdJ3LY4dIpY-4QF77Bt8yqDQstR8hSFnmvdHMJbZpe7ckAtGw/viewform?usp=header";
-  }, 1500);
+    window.location.href = formLink;
+  }, 2500);
 }
 
-
-// Hujan hati
+// hujan hati
 setInterval(() => {
   let heart = document.createElement("div");
   heart.className = "heart";
@@ -125,4 +124,3 @@ setInterval(() => {
 
 </body>
 </html>
-
