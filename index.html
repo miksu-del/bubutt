@@ -99,6 +99,8 @@ function moveNo() {
 }
 
 function yesClick() {
+   document.getElementById("music").play();
+
   document.getElementById("box").innerHTML = `
     <h2>makasih yaa ❤️</h2>
     <h3>aku tunggu jawaban kamu 💕</h3>
@@ -106,8 +108,9 @@ function yesClick() {
 
   setTimeout(() => {
     window.location.href = formLink;
-  }, 2500);
+  }, 3000);
 }
+<audio id="music" src="valentine.mp3"></audio>
 
 // hujan hati
 setInterval(() => {
@@ -124,3 +127,4 @@ setInterval(() => {
 
 </body>
 </html>
+
